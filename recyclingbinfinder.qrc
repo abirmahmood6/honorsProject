@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Public_Recycling_Bins.csv</file>
+    </qresource>
+</RCC>

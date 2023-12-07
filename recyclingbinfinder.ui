@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecyclingBinFinder</class>
+ <widget class="QWidget" name="RecyclingBinFinder">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1210</width>
+    <height>1003</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RecyclingBinFinder</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	border: none;
+	color:white;
+	font: 700 22pt &quot;Arial&quot;;
+	border-radius:30px;
+
+
+}</string>
+  </property>
+  <widget class="QTextBrowser" name="displayWindow">
+   <property name="geometry">
+    <rect>
+     <x>258</x>
+     <y>220</y>
+     <width>651</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextBrowser
+{
+	border: none;
+	color:white;
+	background-color:lightblue;
+	font: 700 22pt &quot;Arial&quot;;
+}</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>108</x>
+     <y>230</y>
+     <width>112</width>
+     <height>222</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="homeButton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightgreen;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: green;
+}</string>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="manButton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightgreen;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: green;
+}</string>
+      </property>
+      <property name="text">
+       <string>Manhattan</string>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="qnsButton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightgreen;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: green;
+}</string>
+      </property>
+      <property name="text">
+       <string>Queens</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="bkButton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightgreen;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: green;
+}</string>
+      </property>
+      <property name="text">
+       <string>Brooklyn</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="siButton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightgreen;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: green;
+}</string>
+      </property>
+      <property name="text">
+       <string>Staten Is.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="bxButton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightgreen;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: green;
+}</string>
+      </property>
+      <property name="text">
+       <string>Bronx</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>318</x>
+     <y>130</y>
+     <width>561</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: green;
+background-color: white;
+	border: bold;
+	font: 700 22pt &quot;Arial&quot;;
+	border-radius:30px;
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string>RecycleFinder: &quot;Recycle Smart, Find Bins, Save Earth.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="homeButton_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>550</y>
+     <width>261</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightblue;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: blue;
+}</string>
+   </property>
+   <property name="text">
+    <string>NYC RECYCLE POLICY</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="siButton_2">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>760</y>
+     <width>110</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	border: none;
+	color:white;
+	background-color:grey;
+	font: 700 22pt &quot;Arial&quot;;
+	border-radius:30px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="qnsButton_2">
+   <property name="geometry">
+    <rect>
+     <x>458</x>
+     <y>180</y>
+     <width>251</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightgreen;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: green;
+}</string>
+   </property>
+   <property name="text">
+    <string>About RecycleFinder</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>470</y>
+     <width>391</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color: green;
+background-color: white;
+	border: bold;
+	font: 700 22pt &quot;Arial&quot;;
+	border-radius:30px;
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Compare Policies with Nearby States</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="homeButton_3">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>500</y>
+     <width>261</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightblue;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: blue;
+}</string>
+   </property>
+   <property name="text">
+    <string>Phila</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="homeButton_4">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>540</y>
+     <width>261</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightblue;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: blue;
+}</string>
+   </property>
+   <property name="text">
+    <string>New Jersey</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="homeButton_5">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>580</y>
+     <width>261</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: none;
+    color: white;
+    background-color: lightblue;
+    font: 700 22pt &quot;Arial&quot;;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: blue;
+}</string>
+   </property>
+   <property name="text">
+    <string>Maryland</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>500</y>
+     <width>16</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">Line{
+border: 5px solid white;
+}</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>1491</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QWidget
+{
+	border: none;
+	color:white;
+	font: 700 22pt &quot;Arial&quot;;
+	border-radius:30px;
+         background-image: url('/Users/abirmahmood/Desktop/Fall Classes 2023/csc 211H/honorsProject/Background-img.jpeg');
+
+
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>displayWindow</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>label</zorder>
+  <zorder>homeButton_2</zorder>
+  <zorder>siButton_2</zorder>
+  <zorder>qnsButton_2</zorder>
+  <zorder>label_2</zorder>
+  <zorder>homeButton_3</zorder>
+  <zorder>homeButton_4</zorder>
+  <zorder>homeButton_5</zorder>
+  <zorder>line</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
