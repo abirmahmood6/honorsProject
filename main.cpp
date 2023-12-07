@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     {
         QApplication a(argc, argv);
         RecyclingBinFinder w;
-        
+
         // Center the main window on the screen
         QScreen *primaryScreen = QGuiApplication::primaryScreen();
         QRect screenGeometry = primaryScreen->geometry();
@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 
         return a.exec();
     }
+    
     catch(int num)
     {
         return 0;

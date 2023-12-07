@@ -26,21 +26,32 @@ public:
 
 private slots:
 
-    void on_manButton_clicked();
 
-    void on_qnsButton_clicked();
-        void on_qnsButton_2_clicked();
+   void on_qnsButton_2_clicked();
 
+    void on_homeButton_3_clicked();
+    
     void on_bkButton_clicked();
 
     void on_bxButton_clicked();
 
     void on_siButton_clicked();
 
+       void on_homeButton_2_clicked();
+       
     void on_homeButton_clicked();
-    void on_homeButton_2_clicked();
+  
 
     void on_siButton_2_clicked();
+
+    void on_manButton_clicked();
+
+
+    void on_qnsButton_clicked();
+
+
+    void on_homeButton_4_clicked();
+ 
 
 private:
     Ui::RecyclingBinFinder *ui; // UI elements and layout

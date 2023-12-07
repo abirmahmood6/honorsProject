@@ -6,12 +6,14 @@ Honors Project
 */
 
 #include "borough.h"
-borough::borough()
-{
 
-}
 
 void borough::setName(QString name)
 {
     boroughName = name;
 }
+borough::borough()
+{
+     // Default constructor 
+}
+

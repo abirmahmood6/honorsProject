@@ -14,6 +14,7 @@ class borough
 public:
     borough();
     void setName(QString name);
+    
 protected:
     QString boroughName;
 };
