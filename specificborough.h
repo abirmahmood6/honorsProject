@@ -10,11 +10,11 @@ Honors Project
 #include "borough.h"
 #include <QTextStream>
 
-class specificBorough:public borough
+class specificBorough:public borough  // Inheriting from the 'borough' class
 {
 public:
-    specificBorough();
-    QStringList boroList(QStringList cityList);
+    specificBorough(); // Default constructor
+    QStringList boroList(QStringList cityList); // Function for filtering and extracting information from NYCData
 };
 
 #endif // SPECIFICBOROUGH_H

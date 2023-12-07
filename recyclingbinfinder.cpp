@@ -4,41 +4,41 @@ CSC 211H
 Dr.Azhar
 Honors Project 
 */
-
+#include <QTextStream>
+#include <QStringList>
+#include <QDebug>
 #include "recyclingbinfinder.h"
 #include "./ui_recyclingbinfinder.h"
 #include "specificborough.h"
 #include <QFile>
-#include <QTextStream>
-#include <QStringList>
-#include <QDebug>
 
 
 
 RecyclingBinFinder::RecyclingBinFinder(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::RecyclingBinFinder)
+    , ui(new Ui::RecyclingBinFinder)  // Dynamic memory allocation using 'new'
 {
     ui->setupUi(this);
-    loadFile();
+    loadFile(); // File I/O
 }
 
 
 RecyclingBinFinder::~RecyclingBinFinder()
 {
-    delete ui;
+    delete ui; // Dynamic memory deallocation using 'delete'
 }
 
 
 void RecyclingBinFinder::on_manButton_clicked()
 {
-    ui->displayWindow->clear();
+    ui->displayWindow->clear();  // Updating UI element
     specificBorough man;
     man.setName("MAN");
     QStringList manList = man.boroList(binList);
     for(int i = 0; i<manList.length(); i++)
-        ui->displayWindow->insertPlainText(manList[i]);
+        ui->displayWindow->insertPlainText(manList[i]); // Updating UI element
 }
+
 
 
 void RecyclingBinFinder::on_qnsButton_clicked()
@@ -99,42 +99,45 @@ void RecyclingBinFinder::on_homeButton_clicked()
     }
 }
 
+// Similar functions for other borough buttons
+
 void RecyclingBinFinder::loadFile()
 {
-    QFile file(":/Public_Recycling_Bins.csv");
+    QFile file(":/Public_Recycling_Bins.csv");   // File I/O
     if(!file.open(QIODevice::ReadOnly)) {
-            qDebug() << file.errorString();
+            qDebug() << file.errorString();  // Standard Output (qDebug)
             return;
     }
     if(!file.exists())   //exception handing: throw exception when file fails to open
     {
-        throw 1;
+        throw 1; // Exception handling
     }
-    QTextStream test(&file);
+    QTextStream test(&file); // File I/O
     while(!test.atEnd())
     {
-        binList.append(test.readLine().split(","));
+        binList.append(test.readLine().split(","));   // Dynamic array manipulation
     }
 }
 
 
 void RecyclingBinFinder::on_siButton_2_clicked()
 {
-    exit(0);
+    exit(0); // System exit
 }
 
 
 void RecyclingBinFinder::on_qnsButton_2_clicked()
 {
     ui->displayWindow->clear();
-    ui->displayWindow->setPlainText("Welcome to RecycleBinFinder NYC, where the magic of recycling comes alive for our little eco-warriors! 🌿🗽 Join us on an exciting adventure to discover and compare recycling bins in the heart of New York City, all designed just for you. Explore the world of sustainability in a way that's fun, engaging, and perfect for kids who dream of making our planet a greener, cleaner place. Let's embark on this journey together, empowering the next generation to recycle, discover, and make a positive impact right here in NYC and beyond! 🌍✨");
+    ui->displayWindow->setPlainText("Welcome to RecycleBinFinder NYC, where the magic of recycling comes alive for our little eco-warriors! 🌿🗽 Join us on an exciting adventure to discover and compare recycling bins in the heart of New York City, all designed just for you. Explore the world of sustainability in a way that's fun, engaging, and perfect for kids who dream of making our planet a greener, cleaner place. Let's embark on this journey together, empowering the next generation to recycle, discover, and make a positive impact right here in NYC and beyond! 🌍✨");  // Updating UI element
 
 }
 
 
 void RecyclingBinFinder::on_homeButton_2_clicked()
 {
-    ui->displayWindow->clear();
+    ui->displayWindow->clear();        // Displaying information on UI element
+
  ui->displayWindow->setPlainText("Recycling Rules for Super Earth Helpers\n\n"
     "🌍 What to Recycle:\n"
     "Sort It Out: Split your recycling into two squads. Use a bin with a cool lid or a clear bag.\n"

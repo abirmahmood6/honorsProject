@@ -4,10 +4,10 @@ CSC 211H
 Dr.Azhar
 Honors Project 
 */
-
 #include <QApplication>
 #include <QScreen>
 #include "recyclingbinfinder.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -15,9 +15,7 @@ int main(int argc, char *argv[])
     {
         QApplication a(argc, argv);
         RecyclingBinFinder w;
-
-
-
+        
         // Center the main window on the screen
         QScreen *primaryScreen = QGuiApplication::primaryScreen();
         QRect screenGeometry = primaryScreen->geometry();

@@ -21,7 +21,7 @@ class RecyclingBinFinder : public QWidget
 public:
     RecyclingBinFinder(QWidget *parent = nullptr);
     ~RecyclingBinFinder();
-    QStringList binList;
+    QStringList binList; // to store information
 
 
 private slots:
@@ -43,7 +43,7 @@ private slots:
     void on_siButton_2_clicked();
 
 private:
-    Ui::RecyclingBinFinder *ui;
-    void loadFile();
+    Ui::RecyclingBinFinder *ui; // UI elements and layout
+    void loadFile(); // File I/O and data loading function
 };
 #endif // RECYCLINGBINFINDER_H
