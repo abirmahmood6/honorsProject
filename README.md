@@ -3,7 +3,8 @@ CSC-211H
 Dr. Azhar
 Honors Project
 
-Google Site Link: 
+Google Site Link: https://sites.google.com/view/recyclefinder/home
+
 
 RecycleBin
 RecycleBin is a platform designed for BMCC students, offering a simple yet powerful solution for locating recycling bins in NYC by borough. The platform goes a step further, enabling users to compare recycling policies with nearby states, making it an ideal resource for research and study purposes.
